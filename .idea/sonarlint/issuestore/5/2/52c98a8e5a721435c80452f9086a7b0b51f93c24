@@ -1,0 +1,4 @@
+
+nsquid:UselessImportCheck"@Remove this unused import 'com.saeed.dao.DAO.UserSignUpImplDAO'.(ñ´¬Êþÿÿÿÿ8î³ö”Ž.
+`squid:CallToDeprecatedMethod"3Remove this use of "ManagedBean"; it is deprecated.(¡úÚï8Ï‰ö”Ž.
+Tsquid:S1948"3Make "userSignUpImplDAO" transient or serializable.(´Êƒœýÿÿÿÿ8Ï‰ö”Ž.

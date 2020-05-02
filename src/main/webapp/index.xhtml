@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+    <h:outputStylesheet library="css" name="bootstrap-3.3.6.min.css"/>
+    <h:outputStylesheet library="css" name="bootstrap-rtl-3.1.2.min.css"/>
+    <h:outputStylesheet library="css" name="generic.css"/>
+
+</h:head>
+
+<h:form>
+    <p:panel id="signUp" widgetVar="signIn" header="ورود به حساب کاربری" styleClass="panel-main">
+        <p:outputPanel styleClass="col-xs-12 col-md-6 padding-left-5 padding-right-5 padding-top-5">
+            <p:outputPanel
+                    styleClass="col-xs-12 col-md-12 input-group padding-left-5 padding-right-5 padding-top-10">
+
+                <p:outputPanel styleClass="input-group-addon background-green-light">
+                    <h:outputText value="نام کاربری: "/>
+                </p:outputPanel>
+                <p:inputText
+                        styleClass=""
+                        autocomplete="off"
+                        value="#{loginBean.userName}"
+                        maxlength="100">
+                </p:inputText>
+            </p:outputPanel>
+
+            <p:outputPanel
+                    styleClass="col-xs-12 col-md-12 input-group padding-left-5 padding-right-5 padding-top-10">
+                <p:outputPanel styleClass="input-group-addon background-green-light">
+                    <h:outputText value="گذرواژه: "/>
+                </p:outputPanel>
+                <p:inputText
+                        styleClass=""
+                        autocomplete="off"
+                        value="#{loginBean.password}"
+                        maxlength="100">
+                </p:inputText>
+            </p:outputPanel>
+
+            <p:outputPanel styleClass="col-xs-12 col-md-6 margin-top-5">
+
+                <p:commandButton value="Login"
+                                 styleClass="col-md-4 background-green-light"
+                                 actionListener="#{loginBean.signIn}"
+                                 style="margin-top: 10px;"/>
+                <p:commandButton id="login-signUpButton" value="Sign Up"
+                                 styleClass="col-md-4 margin-top-10 background-green-light"
+                                 style=" margin-left: 10px;"
+                                 widgetVar="login-signUpButton"
+                                 ajax="false"
+                                 action="sign-up.xhmtl?faces-redirect=true"/>
+            </p:outputPanel>
+
+        </p:outputPanel>
+    </p:panel>
+</h:form>
+
+</html>
