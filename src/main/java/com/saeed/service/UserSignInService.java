@@ -1,6 +1,7 @@
 package com.saeed.service;
 
 import com.saeed.dao.DAO.UserSignInImplDAO;
+import com.saeed.dto.input.InputSignInDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,13 +14,12 @@ public class UserSignInService implements IUserSignInService {
 
     @Override
     @Transactional
-    public boolean signIn(String userName, String password) {
+    public boolean signIn(InputSignInDto inputSignInDto) {
 
-        boolean exist = userSignInImplDAO.signIn(userName, password);
-        if (exist == true){
+        boolean exist = userSignInImplDAO.signIn(inputSignInDto.getUserName(), inputSignInDto.getPassword());
+        if (exist == true) {
             return true;
-        }
-        else
+        } else
             return false;
     }
 }

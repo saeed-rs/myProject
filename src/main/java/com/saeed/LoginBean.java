@@ -1,8 +1,10 @@
 package com.saeed;
 
 import com.saeed.dao.iDAO.IUserSignInDAO;
+import com.saeed.dto.input.InputSignInDto;
 import com.saeed.model.User;
 import com.saeed.service.IUserSignInService;
+import com.saeed.utility.PopMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.faces.context.FacesContext;
@@ -22,6 +24,8 @@ public class LoginBean {
     private IUserSignInDAO iUserSignInDAO;
     @Autowired
     private IUserSignInService iUserSignInService;
+    @Autowired
+    private PopMessage popMessage;
 
     public String getUserName() {
         return userName;
@@ -41,13 +45,17 @@ public class LoginBean {
 
     public void signIn() throws IOException {
 
-        boolean exist = iUserSignInService.signIn(getUserName(), getPassword());
-        if (exist == true){
+        InputSignInDto inputSignInDto = new InputSignInDto();
+        inputSignInDto.setPassword(password);
+        inputSignInDto.setUserName(userName);
+
+        boolean exist = iUserSignInService.signIn(inputSignInDto);
+        if (exist == true) {
             FacesContext.getCurrentInstance().getExternalContext().redirect("accountProfile.xhtml");
         } else {
-            JOptionPane.showMessageDialog(null, "توجه: حساب کاربری یافت نشد");
+            //JOptionPane.showMessageDialog(null, "توجه: حساب کاربری یافت نشد");
+            popMessage.failedMessage("حساب کاربری یافت نشد");
         }
-
 
 
     }
