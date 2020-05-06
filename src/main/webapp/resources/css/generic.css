@@ -588,3 +588,23 @@
     height: calc(100vh - 195px) !important;
     margin-top: 10px !important;
 }
+
+.border-off {
+    border: 0px none !important;
+}
+
+.margin-right-negative {
+    margin-right: -4px !important;
+}
+
+.lef-5 {
+    left: 5px !important;
+}
+
+.auto-hide {
+    display: none !important;
+}
+
+.overflow-auto {
+    overflow: auto !important;
+}

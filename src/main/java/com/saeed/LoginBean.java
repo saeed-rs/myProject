@@ -54,6 +54,7 @@ public class LoginBean {
             FacesContext.getCurrentInstance().getExternalContext().redirect("accountProfile.xhtml");
         } else {
             //JOptionPane.showMessageDialog(null, "توجه: حساب کاربری یافت نشد");
+            //new PopMessage().failedMessage("حساب کاربری یافت نشد");
             popMessage.failedMessage("حساب کاربری یافت نشد");
         }
 

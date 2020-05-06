@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+    <h:outputStylesheet library="css" name="bootstrap-3.3.6.min.css"/>
+    <h:outputStylesheet library="css" name="bootstrap-rtl-3.1.2.min.css"/>
+    <h:outputStylesheet library="css" name="generic.css"/>
+
+</h:head>
+
+<h:form>
+    <p:panel id="signUp" widgetVar="signIn" header="انتخاب دروس" styleClass="panel-main">
+        <p:outputPanel styleClass="col-xs-12 col-md-6 padding-left-5 padding-right-5 padding-top-5">
+
+            <p:dataTable var="course" >
+                <p:column headerText="Id">
+                    <h:outputText value="#{course.id}"/>
+                </p:column>
+
+                <p:column headerText="درس">
+                    <h:outputText value="#{course.name}"/>
+                </p:column>
+
+                <p:column headerText="استاد">
+                    <h:outputText value="#{course.Teacher}"/>
+                </p:column>
+
+            </p:dataTable>
+        </p:outputPanel>
+
+    </p:panel>
+</h:form>
+</html>

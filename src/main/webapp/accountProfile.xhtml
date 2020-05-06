@@ -4,15 +4,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
     <h:outputStylesheet library="css" name="bootstrap-3.3.6.min.css"/>
     <h:outputStylesheet library="css" name="bootstrap-rtl-3.1.2.min.css"/>
     <h:outputStylesheet library="css" name="generic.css"/>
 </h:head>
 
-<h:form>
-    <p:panel id="accountProfile" widgetVar="accountProfile" header="حساب کاربری" styleClass="panel-main">
+<h:body dir="RTL">
+    <h:form>
+
+        <p:layout fullPage="true" scrollable="true">
+            <p:layoutUnit id="topSide" position="north" styleClass="border-off">
+                <p:menubar id="headerMenu">
+
+                </p:menubar>
+            </p:layoutUnit>
+
+            <p:layoutUnit id="rightSide" position="east" styleClass="without-border  overflow-auto">
+
+                <p:panelMenu style="width:300px" styleClass="align-horizontal-right">
+                    <p:submenu label="عملیات گذرواژه">
+                        <p:menuitem value="تغییر گذرواژه"/>
+                    </p:submenu>
+                    <p:submenu label="مدیریت پیام ها">
+                        <p:menuitem value="پیام جدید"/>
+                    </p:submenu>
+                    <p:separator/>
+                    <p:submenu label="کارتابل">
+                        <p:menuitem value="انتخاب دروس"
+                                    action="#{mainProfilePage.formHandler('addCoursePage')}"
+                                    ajax="true"
+                                    update="formContent"
+                                    process="@this"/>
+                    </p:submenu>
+                </p:panelMenu>
+            </p:layoutUnit>
+
+            <p:layoutUnit id="center" position="center"
+                          styleClass="margin-right-negative overflow-auto bottom-50 lef-5 margin-right-2">
+                <ui:insert name="source">
+                    <p:panel id="formContent" styleClass="border-off">
+                        <ui:include src="#{mainProfilePage.currentPage}"></ui:include>
+                    </p:panel>
+                </ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+
+    </h:form>
+</h:body>
+<!--<p:panel id="accountProfile" widgetVar="accountProfile" header="حساب کاربری" styleClass="panel-main">
         <p:panel styleClass="panel-sub">
             <p:panelMenu style="width:300px" styleClass="align-horizontal-right">
                 <p:submenu label="عملیات گذرواژه">
@@ -23,11 +64,14 @@
                 </p:submenu>
                 <p:separator/>
                 <p:submenu label="کارتابل">
-                    <p:menuitem value="Home"/>
+                    <p:menuitem value="انتخاب دروس"
+                    action="addCourses.xhtml?faces-redirect=true"
+                    ajax="true"
+                    process="@this"
+                    />
+                    &lt;!&ndash;action="#{mainProfilePage.formHandler('addCoursePage')}&ndash;&gt;
                 </p:submenu>
             </p:panelMenu>
         </p:panel>
-    </p:panel>
-</h:form>
-
+    </p:panel>-->
 </html>
