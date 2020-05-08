@@ -2,19 +2,31 @@ package com.saeed.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 @Table(name = "COURSES")
 public class Course implements Serializable {
 
-    private int id;
-    private String courseName;
-    private String teacherName;
-    private String classTime;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+
+    private int id;
+
+    @Column(name = "`COURSENAME`")
+    private String courseName;
+
+    @Column(name = "`TEACHERNAME`")
+
+    private String teacherName;
+
+    @Column(name = "`CLASSTIME`")
+
+    private String classTime;
+
+
     public int getId() {
         return id;
     }
@@ -23,7 +35,7 @@ public class Course implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "COURSE-NAME")
+
     public String getCourseName() {
         return courseName;
     }
@@ -32,7 +44,7 @@ public class Course implements Serializable {
         this.courseName = courseName;
     }
 
-    @Column(name = "TEACHER-NAME")
+
     public String getTeacherName() {
         return teacherName;
     }
@@ -41,7 +53,7 @@ public class Course implements Serializable {
         this.teacherName = teacherName;
     }
 
-    @Column(name = "CLASS-TIME")
+
     public String getClassTime() {
         return classTime;
     }
