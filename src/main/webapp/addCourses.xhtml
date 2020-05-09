@@ -17,21 +17,21 @@
     <p:panel id="signUp" widgetVar="signIn" header="انتخاب دروس" styleClass="panel-main">
         <p:outputPanel styleClass="col-xs-12 col-md-6 padding-left-5 padding-right-5 padding-top-5">
 
-            <p:dataTable var="course" >
+            <p:dataTable var="course" value="#{addCourses.lstCourses}">
                 <p:column headerText="Id">
                     <h:outputText value="#{course.id}"/>
                 </p:column>
 
                 <p:column headerText="درس">
-                    <h:outputText value="#{course.name}"/>
+                    <h:outputText value="#{course.courseName}"/>
                 </p:column>
 
                 <p:column headerText="استاد">
-                    <h:outputText value="#{course.Teacher}"/>
+                    <h:outputText value="#{course.teacherName}"/>
                 </p:column>
 
                 <p:column headerText="ساعت">
-                    <h:outputText value="#{course.Teacher}"/>
+                    <h:outputText value="#{course.classTime}"/>
                 </p:column>
 
             </p:dataTable>

@@ -28,6 +28,7 @@ public class mainProfilePage {
         switch (pageName){
             case "addCoursePage":{
                 setCurrentPage("addCourses.xhtml");
+                addCourses.init();
                 break;
             }
         }

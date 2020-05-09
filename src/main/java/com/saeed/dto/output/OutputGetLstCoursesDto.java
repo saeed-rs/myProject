@@ -1,21 +1,23 @@
 package com.saeed.dto.output;
 
 import com.saeed.dto.input.SimpleGenericDto;
+import com.saeed.model.Course;
 
+import java.util.List;
 import java.util.Set;
 
 public class OutputGetLstCoursesDto {
 
-    private Set<SimpleGenericDto<Long, String, String>> lstCourses;
+    private List<Course> lstCourses;
 
     public OutputGetLstCoursesDto() {
     }
 
-    public Set<SimpleGenericDto<Long, String, String>> getLstCourses() {
+    public List<Course> getLstCourses() {
         return lstCourses;
     }
 
-    public void setLstCourses(Set<SimpleGenericDto<Long, String, String>> lstCourses) {
+    public void setLstCourses(List<Course> lstCourses) {
         this.lstCourses = lstCourses;
     }
 }
