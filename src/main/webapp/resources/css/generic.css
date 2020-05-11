@@ -608,3 +608,8 @@
 .overflow-auto {
     overflow: auto !important;
 }
+
+.overflow-y {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
