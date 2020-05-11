@@ -1,6 +1,7 @@
 package com.saeed;
 
 import com.saeed.dao.DAO.LoadLstCourses;
+import com.saeed.dto.CourseInfoDto;
 import com.saeed.dto.input.InputGetLstCoursesDto;
 import com.saeed.dto.input.SimpleGenericDto;
 import com.saeed.dto.output.OutputGetLstCoursesDto;
@@ -12,14 +13,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Named
 @ViewScoped
 public class AddCourses implements Serializable {
+
+    @Autowired
+    private IAddCourseService iAddCourseService;
+
+    private long id;
+    private String courseName;
+    private String courseTecacherName;
+    private String courseTime;
+    private Set<CourseInfoDto> courses = new HashSet<>();
+
+    public Set<CourseInfoDto> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(Set<CourseInfoDto> courses) {
+        this.courses = courses;
+    }
 
     private List<Course> lstCourses;
 
@@ -31,8 +47,46 @@ public class AddCourses implements Serializable {
         this.lstCourses = lstCourses;
     }
 
-    @Autowired
-    private IAddCourseService iAddCourseService;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public String getCourseTecacherName() {
+        return courseTecacherName;
+    }
+
+    public void setCourseTecacherName(String courseTecacherName) {
+        this.courseTecacherName = courseTecacherName;
+    }
+
+    public String getCourseTime() {
+        return courseTime;
+    }
+
+    public void setCourseTime(String courseTime) {
+        this.courseTime = courseTime;
+    }
+
+    public void addCourse(){
+        CourseInfoDto courseInfoDto = new CourseInfoDto();
+        courseInfoDto.setId(getId());
+        courseInfoDto.setCourseName(getCourseName());
+        courseInfoDto.setCourseTecacherName(getCourseTecacherName());
+        courseInfoDto.setCourseTime(getCourseTime());
+        getCourses().add(courseInfoDto);
+    }
 
     public List<Course> loadLstCourses(){
         InputGetLstCoursesDto inputGetLstCoursesDto = new InputGetLstCoursesDto();

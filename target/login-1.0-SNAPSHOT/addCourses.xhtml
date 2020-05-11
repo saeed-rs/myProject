@@ -14,7 +14,7 @@
 </h:head>
 
 <h:form>
-    <p:panel id="signUp" widgetVar="signIn" header="انتخاب دروس" styleClass="panel-main">
+    <p:panel id="addCourse" widgetVar="addCourse" header="انتخاب دروس" styleClass="panel-main">
         <p:outputPanel styleClass="col-xs-12 col-md-12 padding-left-5 padding-right-5 padding-top-5">
 
             <p:dataTable var="course" value="#{addCourses.lstCourses}">
@@ -37,60 +37,79 @@
             </p:dataTable>
         </p:outputPanel>
 
-        <p:outputPanel styleClass="col-xs-12 col-md-12 padding-left-5 padding-right-5 padding-top-5 margin-top-10">
+        <p:outputPanel id="addCourse_addCoursePanel" styleClass="col-xs-12 col-md-12 padding-left-5 padding-right-5 padding-top-5 margin-top-10">
             <p:outputPanel styleClass="col-xs-12 col-md-6 input-group padding-left-5 padding-right-5 padding-bottom-5">
                 <p:outputPanel styleClass="input-group-addon">
                     <h:outputText id="addcourse_lblCourseID" value="شماره درس"/>
                 </p:outputPanel>
-                <p:inputText id="addCourse_txtCOurseID" styleClass="" maxlength="10" placeholder="بنویسید"/>
+                <p:inputText id="addCourse_txtCOurseID" styleClass=""
+                             maxlength="10"
+                             placeholder="بنویسید"
+                             value="#{addCourses.id}"/>
             </p:outputPanel>
 
             <p:outputPanel styleClass="col-xs-12 col-md-6 input-group padding-left-5 padding-right-5 padding-bottom-5">
                 <p:outputPanel styleClass="input-group-addon">
                     <h:outputText id="addcourse_lblCourseName" value="نام درس"/>
                 </p:outputPanel>
-                <p:inputText id="addCourse_txtCOurseName" styleClass="" maxlength="50" placeholder="بنویسید"/>
+                <p:inputText id="addCourse_txtCOurseName" styleClass=""
+                             maxlength="50"
+                             placeholder="بنویسید"
+                             value="#{addCourses.courseName}"/>
             </p:outputPanel>
 
             <p:outputPanel styleClass="col-xs-12 col-md-6 input-group padding-left-5 padding-right-5 padding-bottom-5">
                 <p:outputPanel styleClass="input-group-addon">
                     <h:outputText id="addcourse_lblCourseTeacherName" value="نام استاد"/>
                 </p:outputPanel>
-                <p:inputText id="addCourse_txtCourseTeacherName" styleClass="" maxlength="50" placeholder="بنویسید"/>
+                <p:inputText id="addCourse_txtCourseTeacherName" styleClass=""
+                             maxlength="50"
+                             placeholder="بنویسید"
+                             value="#{addCourses.courseTecacherName}"/>
             </p:outputPanel>
 
             <p:outputPanel styleClass="col-xs-12 col-md-6 input-group padding-left-5 padding-right-5 padding-bottom-5">
                 <p:outputPanel styleClass="input-group-addon">
                     <h:outputText id="addcourse_lblCourseTime" value="ساعت"/>
                 </p:outputPanel>
-                <p:inputText id="addCourse_txtCourseTime" styleClass="" maxlength="10" placeholder="بنویسید"/>
+                <p:inputText id="addCourse_txtCourseTime" styleClass=""
+                             maxlength="10"
+                             placeholder="بنویسید"
+                             value="#{addCourses.courseTime}"/>
             </p:outputPanel>
 
 
             <p:outputPanel styleClass="col-xs-12 col-md-6 input-group padding-left-5 padding-right-5 padding-bottom-5">
-                <p:commandButton id="addCourse_addCourse" title="اضافه کردن دروس" icon="ui-icon-plusthick"/>
-                <p:commandButton id="addCourse_deleteCourse" title="حذف کردن دروس" icon="ui-icon-minusthick"/>
+                <p:commandButton id="addCourse_addCourse" title="اضافه کردن دروس"
+                                 icon="ui-icon-plusthick"
+                                 actionListener="#{addCourses.addCourse}"
+                                 process="@this addCourse_addCoursePanel"
+                                 update="addCourse_courseList"/>
+
+                <p:commandButton id="addCourse_deleteCourse" title="حذف کردن دروس"
+                                 icon="ui-icon-minusthick"/>
             </p:outputPanel>
 
             <p:outputPanel
                     styleClass="col-xs-12 col-md-12 margin-top-10 max-height-200 overflow-y without-padding padding-right-5 padding-left-5">
-                <p:dataTable styleClass="margin-top-10" emptyMessage="داده ای یافت نشد"
-                >
+                <p:dataTable id="addCourse_courseList" styleClass="margin-top-10" emptyMessage="داده ای یافت نشد"
+                             var="courseInfo"
+                             value="#{addCourses.courses}">
 
-                    <p:column width="45" headerText="شماره" >
-                        <h:outputText />
+                    <p:column width="45" headerText="شماره">
+                        <h:outputText value="#{courseInfo.id}"/>
                     </p:column>
 
-                    <p:column width="45" headerText="نام درس" >
-                        <h:outputText />
+                    <p:column width="45" headerText="نام درس">
+                        <h:outputText value="#{courseInfo.courseName}"/>
                     </p:column>
 
-                    <p:column width="45" headerText="استاد" >
-                        <h:outputText />
+                    <p:column width="45" headerText="استاد">
+                        <h:outputText value="#{courseInfo.courseTecacherName}"/>
                     </p:column>
 
-                    <p:column width="45" headerText="ساعت" >
-                        <h:outputText />
+                    <p:column width="45" headerText="ساعت">
+                        <h:outputText value="#{courseInfo.courseTime}"/>
                     </p:column>
 
                 </p:dataTable>
