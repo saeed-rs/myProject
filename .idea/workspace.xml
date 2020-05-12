@@ -6,17 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87424a2e-e7aa-41b8-8c2e-20d448600996" name="Default" comment="saeed-rs 5-11-2020:">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saeed/dto/CourseInfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/saeed/dto/CourseInfoDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/WEB-INF/classes/com/saeed/dto/CourseInfoDto.class" afterDir="false" />
+    <list default="true" id="87424a2e-e7aa-41b8-8c2e-20d448600996" name="Default" comment="saeed-rs 5-12-2020:">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saeed/AddCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saeed/AddCourses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/addCourses.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addCourses.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/saeed/AddCourses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/saeed/AddCourses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/WEB-INF/classes/com/saeed/AddCourses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/WEB-INF/classes/com/saeed/AddCourses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/addCourses.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/addCourses.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/resources/css/generic.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/login-1.0-SNAPSHOT/resources/css/generic.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/addCourses.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="111" column="68" selection-start-line="111" selection-start-column="68" selection-end-line="111" selection-end-column="68" />
+            <state relative-caret-position="152">
+              <caret line="121" column="79" lean-forward="true" selection-start-line="121" selection-start-column="79" selection-end-line="121" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -56,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/generic.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
+            <state relative-caret-position="18420">
               <caret line="614" column="1" selection-start-line="614" selection-start-column="1" selection-end-line="614" selection-end-column="1" />
             </state>
           </provider>
@@ -65,57 +57,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/AddCourses.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
+            <state relative-caret-position="85">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#935#936#0" expanded="true" />
                 <element signature="e#965#966#0" expanded="true" />
                 <element signature="e#1023#1024#0" expanded="true" />
                 <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1131#1132#0" expanded="true" />
-                <element signature="e#1165#1166#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
-                <element signature="e#1263#1264#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1404#1405#0" expanded="true" />
-                <element signature="e#1445#1446#0" expanded="true" />
                 <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1573#1574#0" expanded="true" />
-                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1557#1558#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
                 <element signature="e#1643#1644#0" expanded="true" />
-                <element signature="e#1695#1696#0" expanded="true" />
-                <element signature="e#1739#1740#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dto/CourseInfoDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding>
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
                 <element signature="e#1645#1646#0" expanded="true" />
                 <element signature="e#1728#1729#0" expanded="true" />
               </folding>
@@ -173,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dao/DAO/LoadLstCourses.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="107">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#0#11#1" expanded="true" />
@@ -571,7 +535,8 @@
       <workItem from="1588780268910" duration="11227000" />
       <workItem from="1588961815623" duration="8606000" />
       <workItem from="1589044909032" duration="7239000" />
-      <workItem from="1589215843062" duration="8506000" />
+      <workItem from="1589215843062" duration="8627000" />
+      <workItem from="1589308739844" duration="2945000" />
     </task>
     <task id="LOCAL-00001" summary="saeed-rs 5-2-2020: first commit to myProject">
       <created>1588438877204</created>
@@ -629,11 +594,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589219716992</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="saeed-rs 5-12-2020:">
+      <created>1589226271602</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589226271602</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121826000" />
+    <option name="totallyTimeSpent" value="124892000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -648,7 +620,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14674735" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14901665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -659,7 +631,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22331154" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.22905983" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.9054463" visible="true" weight="0.25470087" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.9054463" visible="true" weight="0.35042736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.12991454" />
@@ -738,7 +710,8 @@
     <MESSAGE value="saeed-rs 5-9-2020:" />
     <MESSAGE value="saeed-rs 5-10-2020:" />
     <MESSAGE value="saeed-rs 5-11-2020:" />
-    <option name="LAST_COMMIT_MESSAGE" value="saeed-rs 5-11-2020:" />
+    <MESSAGE value="saeed-rs 5-12-2020:" />
+    <option name="LAST_COMMIT_MESSAGE" value="saeed-rs 5-12-2020:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -772,12 +745,6 @@
           <line>17</line>
           <properties />
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/saeed/dao/DAO/LoadLstCourses.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saeed/AddCourses.java</url>
@@ -1147,6 +1114,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/generic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18420">
+          <caret line="614" column="1" selection-start-line="614" selection-start-column="1" selection-end-line="614" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dto/output/OutputGetLstCoursesDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1201,84 +1175,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/generic.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dto/CourseInfoDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="614" column="1" selection-start-line="614" selection-start-column="1" selection-end-line="614" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addCourses.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="111" column="68" selection-start-line="111" selection-start-column="68" selection-end-line="111" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dao/DAO/LoadLstCourses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="93">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#11#1" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/AddCourses.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
+        <state relative-caret-position="85">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#935#936#0" expanded="true" />
             <element signature="e#965#966#0" expanded="true" />
             <element signature="e#1023#1024#0" expanded="true" />
             <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
             <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1573#1574#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1557#1558#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
             <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1695#1696#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dto/CourseInfoDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addCourses.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="152">
+          <caret line="121" column="79" lean-forward="true" selection-start-line="121" selection-start-column="79" selection-end-line="121" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saeed/dao/DAO/LoadLstCourses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#11#1" expanded="true" />
           </folding>
         </state>
       </provider>
