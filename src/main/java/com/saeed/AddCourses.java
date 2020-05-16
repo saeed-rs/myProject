@@ -2,8 +2,10 @@ package com.saeed;
 
 import com.saeed.dao.DAO.LoadLstCourses;
 import com.saeed.dto.CourseInfoDto;
+import com.saeed.dto.input.InputAddCourseDto;
 import com.saeed.dto.input.InputGetLstCoursesDto;
 import com.saeed.dto.input.SimpleGenericDto;
+import com.saeed.dto.output.OutputAddCourseDto;
 import com.saeed.dto.output.OutputGetLstCoursesDto;
 import com.saeed.model.Course;
 import com.saeed.service.IAddCourseService;
@@ -79,7 +81,7 @@ public class AddCourses implements Serializable {
         this.courseTime = courseTime;
     }
 
-    public void addCourse(){
+    public void addCourse() {
         CourseInfoDto courseInfoDto = new CourseInfoDto();
         courseInfoDto.setId(getId());
         courseInfoDto.setCourseName(getCourseName());
@@ -88,7 +90,7 @@ public class AddCourses implements Serializable {
         getCourses().add(courseInfoDto);
     }
 
-    public List<Course> loadLstCourses(){
+    public List<Course> loadLstCourses() {
         InputGetLstCoursesDto inputGetLstCoursesDto = new InputGetLstCoursesDto();
         OutputGetLstCoursesDto outputGetLstCoursesDto = iAddCourseService.getLstCourses(inputGetLstCoursesDto);
         lstCourses = new ArrayList<>();
@@ -96,8 +98,25 @@ public class AddCourses implements Serializable {
         return lstCourses;
     }
 
-    public void init(){
+    public void init() {
         this.loadLstCourses();
     }
+
+    public void save() {
+
+        InputAddCourseDto inputAddCourseDto = new InputAddCourseDto();
+        inputAddCourseDto.setLstCourse(courses);
+        OutputAddCourseDto outputAddCourse = iAddCourseService.addCourse(inputAddCourseDto);
+
+        //clean();
+    }
+
+    /*public void clean() {
+        setCourseName(null);
+        setCourseTecacherName(null);
+        setCourseTime(null);
+        //setId(new Long(null));
+        setLstCourses(null);
+    }*/
 
 }

@@ -37,7 +37,8 @@
             </p:dataTable>
         </p:outputPanel>
 
-        <p:outputPanel id="addCourse_addCoursePanel" styleClass="col-xs-12 col-md-12 padding-left-5 padding-right-5 padding-top-5 margin-top-10">
+        <p:outputPanel id="addCourse_addCoursePanel"
+                       styleClass="col-xs-12 col-md-12 padding-left-5 padding-right-5 padding-top-5 margin-top-10">
             <p:outputPanel styleClass="col-xs-12 col-md-6 input-group padding-left-5 padding-right-5 padding-bottom-5">
                 <p:outputPanel styleClass="input-group-addon">
                     <h:outputText id="addcourse_lblCourseID" value="شماره درس"/>
@@ -120,7 +121,13 @@
 
         <p:outputPanel styleClass="col-xs-12 col-md-12 padding-bottom-5 margin-top-20"
                        style="position: fixed; width: 90%; top: 80%; left: 2%">
-            <p:commandButton styleClass="align-horizontal-left" value="ثبت" ></p:commandButton>
+            <p:commandButton styleClass="align-horizontal-left"
+                             value="ثبت"
+                             process="@this"
+                             update="addCourse_addCoursePanel"
+                             actionListener="#{addCourses.save}">
+
+            </p:commandButton>
 
         </p:outputPanel>
 

@@ -1,18 +1,45 @@
 package com.saeed.model;
 
+import com.saeed.dto.CourseInfoDto;
+
 import javax.persistence.*;
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "COURSES")
-public class Course implements Serializable {
+@Table
+public class AddedCourses {
+
+    /*@Id
+    private long id;
+
+    @Column
+    @ElementCollection(targetClass = Integer.class)
+    private Set<CourseInfoDto> addedCourses = new HashSet<>();
+
+    public Set<CourseInfoDto> getAddedCourses() {
+        return addedCourses;
+    }
+
+    public void setAddedCourses(Set<CourseInfoDto> addedCourses) {
+        this.addedCourses = addedCourses;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public AddedCourses(long id, Set<CourseInfoDto> addedCourses) {
+        this.id = id;
+        this.addedCourses = addedCourses;
+    }*/
+
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-
     private int id;
 
     @Column(name = "`COURSENAME`")
@@ -24,7 +51,6 @@ public class Course implements Serializable {
     @Column(name = "`CLASSTIME`")
     private String classTime;
 
-
     public int getId() {
         return id;
     }
@@ -32,7 +58,6 @@ public class Course implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
-
 
     public String getCourseName() {
         return courseName;
@@ -42,7 +67,6 @@ public class Course implements Serializable {
         this.courseName = courseName;
     }
 
-
     public String getTeacherName() {
         return teacherName;
     }
@@ -50,7 +74,6 @@ public class Course implements Serializable {
     public void setTeacherName(String teacherName) {
         this.teacherName = teacherName;
     }
-
 
     public String getClassTime() {
         return classTime;
@@ -60,10 +83,11 @@ public class Course implements Serializable {
         this.classTime = classTime;
     }
 
-    public Course() {
+    public AddedCourses() {
     }
 
-    public Course(String courseName, String teacherName, String classTime) {
+    public AddedCourses(int id, String courseName, String teacherName, String classTime) {
+        this.id = id;
         this.courseName = courseName;
         this.teacherName = teacherName;
         this.classTime = classTime;
@@ -71,7 +95,7 @@ public class Course implements Serializable {
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "AddedCourses{" +
                 "id=" + id +
                 ", courseName='" + courseName + '\'' +
                 ", teacherName='" + teacherName + '\'' +

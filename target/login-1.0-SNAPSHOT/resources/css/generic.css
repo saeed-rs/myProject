@@ -613,3 +613,9 @@
     overflow-x: hidden !important;
     overflow-y: auto !important;
 }
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+    margin-right: 0px;
+}
