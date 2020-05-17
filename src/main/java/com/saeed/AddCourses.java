@@ -30,6 +30,7 @@ public class AddCourses implements Serializable {
     private String courseTecacherName;
     private String courseTime;
     private Set<CourseInfoDto> courses = new HashSet<>();
+    private List<Course> lstCourses;
 
     public Set<CourseInfoDto> getCourses() {
         return courses;
@@ -38,8 +39,6 @@ public class AddCourses implements Serializable {
     public void setCourses(Set<CourseInfoDto> courses) {
         this.courses = courses;
     }
-
-    private List<Course> lstCourses;
 
     public List<Course> getLstCourses() {
         return lstCourses;
@@ -108,15 +107,16 @@ public class AddCourses implements Serializable {
         inputAddCourseDto.setLstCourse(courses);
         OutputAddCourseDto outputAddCourse = iAddCourseService.addCourse(inputAddCourseDto);
 
-        //clean();
+        clean();
     }
 
-    /*public void clean() {
-        setCourseName(null);
-        setCourseTecacherName(null);
-        setCourseTime(null);
-        //setId(new Long(null));
-        setLstCourses(null);
-    }*/
+    public void clean() {
+        setCourseName(" ");
+        setCourseTecacherName(" ");
+        setCourseTime(" ");
+        setId(0);
+        setLstCourses(new ArrayList<>());
+        setCourses(new HashSet<>());
+    }
 
 }
