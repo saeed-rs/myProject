@@ -118,5 +118,4 @@ public class AddCourses implements Serializable {
         setLstCourses(new ArrayList<>());
         setCourses(new HashSet<>());
     }
-
 }

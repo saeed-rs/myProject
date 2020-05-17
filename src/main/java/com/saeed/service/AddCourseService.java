@@ -43,9 +43,9 @@ public class AddCourseService implements IAddCourseService {
     @Override
     public OutputAddCourseDto addCourse(InputAddCourseDto inputAddCourseDto) {
 
-        Set<CourseInfoDto> courseInfoDtos = inputAddCourseDto.getLstCourse().stream()
+        /*Set<CourseInfoDto> courseInfoDtos = inputAddCourseDto.getLstCourse().stream()
                 .map(x -> new CourseInfoDto(x.getId(), x.getCourseName(), x.getCourseTecacherName(), x.getCourseTime()))
-                .collect(Collectors.toSet());
+                .collect(Collectors.toSet());*/
         OutputAddCourseDto outputAddCourseDto = new OutputAddCourseDto();
 
         //AddedCourses addedCourses = new AddedCourses();

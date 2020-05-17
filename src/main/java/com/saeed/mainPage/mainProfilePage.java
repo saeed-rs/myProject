@@ -1,6 +1,7 @@
 package com.saeed.mainPage;
 
 import com.saeed.AddCourses;
+import com.saeed.AddedCourses;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.faces.view.ViewScoped;
@@ -12,6 +13,8 @@ public class mainProfilePage {
 
     @Autowired
     private AddCourses addCourses;
+    @Autowired
+    private AddedCourses addedCourses;
 
     private String currentPage;
 
@@ -23,12 +26,18 @@ public class mainProfilePage {
         this.currentPage = currentPage;
     }
 
-    public void formHandler(String pageName){
+    public void formHandler(String pageName) {
 
-        switch (pageName){
-            case "addCoursePage":{
+        switch (pageName) {
+            case "addCoursePage": {
                 setCurrentPage("addCourses.xhtml");
                 addCourses.init();
+                break;
+            }
+
+            case "addedCourses": {
+                setCurrentPage("addedCourses.xhtml");
+                addedCourses.init();
                 break;
             }
         }
