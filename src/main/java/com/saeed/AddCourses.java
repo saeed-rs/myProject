@@ -31,6 +31,7 @@ public class AddCourses implements Serializable {
     private String courseTime;
     private Set<CourseInfoDto> courses = new HashSet<>();
     private List<Course> lstCourses;
+    private List<CourseInfoDto> selectedCourses;
 
     public Set<CourseInfoDto> getCourses() {
         return courses;
@@ -80,6 +81,14 @@ public class AddCourses implements Serializable {
         this.courseTime = courseTime;
     }
 
+    public List<CourseInfoDto> getSelectedCourses() {
+        return selectedCourses;
+    }
+
+    public void setSelectedCourses(List<CourseInfoDto> selectedCourses) {
+        this.selectedCourses = selectedCourses;
+    }
+
     public void addCourse() {
         CourseInfoDto courseInfoDto = new CourseInfoDto();
         courseInfoDto.setId(getId());
@@ -117,5 +126,9 @@ public class AddCourses implements Serializable {
         setId(0);
         setLstCourses(new ArrayList<>());
         setCourses(new HashSet<>());
+    }
+
+    public void deleteCurses(){
+        courses.removeAll(getSelectedCourses());
     }
 }

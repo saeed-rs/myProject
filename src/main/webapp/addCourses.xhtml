@@ -88,6 +88,9 @@
                                  update="addCourse_courseList"/>
 
                 <p:commandButton id="addCourse_deleteCourse" title="حذف کردن دروس"
+                                 actionListener="#{addCourses.deleteCurses}"
+                                 process="@this addCourse_addCoursePanel addCourse_courseList"
+                                 update="@this addCourse_courseList"
                                  icon="ui-icon-minusthick"/>
             </p:outputPanel>
 
@@ -95,7 +98,11 @@
                     styleClass="col-xs-12 col-md-12 margin-top-10 max-height-200 overflow-y without-padding padding-right-5 padding-left-5">
                 <p:dataTable id="addCourse_courseList" styleClass="margin-top-10" emptyMessage="داده ای یافت نشد"
                              var="courseInfo"
+                             rowKey="#{courseInfo}"
+                             selection="#{addCourses.selectedCourses}"
                              value="#{addCourses.courses}">
+
+                    <p:column width="5" styleClass="align-horizontal-center" selectionMode="multiple"/>
 
                     <p:column width="45" headerText="شماره">
                         <h:outputText value="#{courseInfo.id}"/>
